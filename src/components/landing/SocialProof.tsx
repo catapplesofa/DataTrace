@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Shield, Lock, Award, Star } from "lucide-react";
+import { Shield, Lock, CheckCircle, Clock } from "lucide-react";
 
 const badges = [
-  { icon: Shield, label: "SOC 2 Compliant" },
-  { icon: Lock, label: "End-to-End Encrypted" },
-  { icon: Award, label: "Chrome Web Store Featured" },
-  { icon: Star, label: "4.9★ — 2,400+ Reviews" },
+  { icon: Shield, label: "Official portals only" },
+  { icon: Lock, label: "No password sharing" },
+  { icon: CheckCircle, label: "User-controlled MFA" },
+  { icon: Clock, label: "Clear request status" },
 ];
 
 const SocialProof = () => {

@@ -10,12 +10,12 @@ const Navbar = () => {
           <span className="font-display text-lg font-bold text-primary">DataTrace</span>
         </div>
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#features" className="font-body text-sm text-muted-foreground transition-colors duration-200 hover:text-primary">Features</a>
+          <a href="#targets" className="font-body text-sm text-muted-foreground transition-colors duration-200 hover:text-primary">Targets</a>
           <a href="#how-it-works" className="font-body text-sm text-muted-foreground transition-colors duration-200 hover:text-primary">How it works</a>
           <a href="#trust" className="font-body text-sm text-muted-foreground transition-colors duration-200 hover:text-primary">Trust</a>
         </div>
-        <Button variant="hero" size="lg">
-          Add to Chrome — Free
+        <Button asChild variant="hero" size="lg">
+          <a href="/start">Start a request</a>
         </Button>
       </div>
     </nav>

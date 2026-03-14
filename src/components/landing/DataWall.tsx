@@ -1,35 +1,34 @@
 import { motion } from "framer-motion";
 
 const sites = [
-  "Amazon", "Facebook", "Google", "Twitter", "Netflix", "Spotify",
-  "Instagram", "LinkedIn", "TikTok", "Reddit", "YouTube", "Uber",
-  "Airbnb", "Walmart", "eBay", "PayPal", "Zoom", "Slack",
+  "Google", "Apple", "Meta", "Amazon", "Microsoft", "Uber",
+  "Experian", "Equifax", "TransUnion", "LexisNexis",
+  "AT&T", "Verizon", "T-Mobile",
+  "American Airlines", "United", "Delta",
 ];
 
 const dataTypes: Record<string, string> = {
-  Amazon: "Purchase history",
-  Facebook: "Social graph",
-  Google: "Search history",
-  Twitter: "Interest profile",
-  Netflix: "Viewing habits",
-  Spotify: "Listening data",
-  Instagram: "Photo metadata",
-  LinkedIn: "Career data",
-  TikTok: "Watch patterns",
-  Reddit: "Browsing habits",
-  YouTube: "Watch history",
-  Uber: "Location history",
-  Airbnb: "Travel data",
-  Walmart: "Shopping data",
-  eBay: "Purchase history",
-  PayPal: "Financial data",
-  Zoom: "Meeting logs",
-  Slack: "Message data",
+  Google: "Search & location history",
+  Apple: "Account & iCloud data",
+  Meta: "Social graph & activity",
+  Amazon: "Purchases & devices",
+  Microsoft: "Account activity",
+  Uber: "Trips & location",
+  Experian: "Credit file",
+  Equifax: "Credit file",
+  TransUnion: "Credit file",
+  LexisNexis: "Identity profile",
+  "AT&T": "Network metadata",
+  Verizon: "Network metadata",
+  "T-Mobile": "Network metadata",
+  "American Airlines": "Flight history",
+  United: "Flight history",
+  Delta: "Flight history",
 };
 
 const DataWall = () => {
   return (
-    <section className="border-y border-border bg-card py-16">
+    <section id="targets" className="border-y border-border bg-card py-16">
       <div className="container mb-10 text-center">
         <motion.p
           initial={{ opacity: 0 }}
@@ -37,7 +36,7 @@ const DataWall = () => {
           viewport={{ once: true }}
           className="font-body text-sm font-medium uppercase tracking-widest text-muted-foreground"
         >
-          Your data is everywhere
+          Start with the highest-yield targets
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 10 }}
@@ -46,7 +45,7 @@ const DataWall = () => {
           transition={{ delay: 0.1 }}
           className="mt-3 font-display text-3xl font-bold text-primary"
         >
-          Websites collect more than you think
+          The biggest platforms hold most of your data
         </motion.h2>
       </div>
 

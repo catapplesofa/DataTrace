@@ -1,27 +1,27 @@
 import { motion } from "framer-motion";
-import { Search, FileText, Trash2 } from "lucide-react";
+import { Search, Shield, FileText } from "lucide-react";
 
 const features = [
   {
     icon: Search,
-    title: "Scan",
-    description: "DataTrace automatically detects cookies, trackers, and stored personal data on any website you visit.",
+    title: "Pick targets",
+    description: "Start with Google, Apple, Meta, Amazon, Uber, and credit bureaus to recover the bulk of your data fast.",
+  },
+  {
+    icon: Shield,
+    title: "Authenticate safely",
+    description: "Use official privacy portals. You stay in control of logins, MFA, and any identity checks.",
   },
   {
     icon: FileText,
-    title: "Report",
-    description: "Get a clear, detailed report of exactly what data each site holds — emails, locations, browsing habits, and more.",
-  },
-  {
-    icon: Trash2,
-    title: "Request Deletion",
-    description: "Generate GDPR & CCPA-compliant deletion requests and send them directly to the data controller with one click.",
+    title: "Track requests",
+    description: "Queue exports, confirm email handoffs, and keep a clean status list across every company.",
   },
 ];
 
 const Features = () => {
   return (
-    <section id="features" className="py-24">
+    <section id="how-it-works" className="py-24">
       <div className="container">
         <div className="mb-16 text-center">
           <motion.p
@@ -39,7 +39,7 @@ const Features = () => {
             transition={{ delay: 0.1 }}
             className="mt-3 font-display text-4xl font-bold text-primary"
           >
-            Three steps to privacy
+            Three steps to retrieval
           </motion.h2>
         </div>
 

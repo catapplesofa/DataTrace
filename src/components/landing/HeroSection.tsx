@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Chrome, CheckCircle, AlertTriangle, Mail, Cookie, Eye, Shield } from "lucide-react";
+import { CheckCircle, FileText, MapPin, Search, Shield, ShoppingCart, Car } from "lucide-react";
 
 const dataItems = [
-  { icon: Mail, label: "Email addresses", count: 12, status: "found" },
-  { icon: Cookie, label: "Tracking cookies", count: 47, status: "found" },
-  { icon: Eye, label: "Browsing history", count: 156, status: "found" },
-  { icon: AlertTriangle, label: "Location data", count: 8, status: "warning" },
+  { icon: Search, label: "Search history", count: 1 },
+  { icon: MapPin, label: "Location timeline", count: 3 },
+  { icon: ShoppingCart, label: "Purchase history", count: 2 },
+  { icon: Car, label: "Trip logs", count: 1 },
 ];
 
 const HeroSection = () => {
@@ -23,33 +23,35 @@ const HeroSection = () => {
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5">
               <div className="h-2 w-2 rounded-full bg-accent" />
               <span className="font-body text-xs font-medium text-muted-foreground">
-                Trusted by 50,000+ users
+                Official privacy portals, guided end to end
               </span>
             </div>
             <h1 className="font-display text-5xl font-extrabold leading-tight tracking-tight text-primary lg:text-6xl">
-              Take back your{" "}
-              <span className="text-gradient">digital footprint</span>
+              Retrieve your{" "}
+              <span className="text-gradient">personal data</span>
             </h1>
             <p className="mt-6 max-w-lg font-body text-lg leading-relaxed text-muted-foreground">
-              DataTrace scans websites you visit, reveals exactly what personal data they've collected, and helps you request its deletion — in one click.
+              DataTrace guides you through official privacy and export portals for the biggest companies, so you can request a full copy of your data with confidence.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="h-12 px-8 text-base">
-                <Chrome className="mr-2 h-5 w-5" />
-                Add to Chrome — Free
+              <Button asChild variant="hero" size="lg" className="h-12 px-8 text-base">
+                <a href="/start">
+                  <FileText className="mr-2 h-5 w-5" />
+                  Start a data request
+                </a>
               </Button>
-              <Button variant="hero-outline" size="lg" className="h-12 px-8 text-base">
-                See how it works
+              <Button asChild variant="hero-outline" size="lg" className="h-12 px-8 text-base">
+                <a href="#targets">View target list</a>
               </Button>
             </div>
             <div className="mt-8 flex items-center gap-6">
               <div className="flex items-center gap-1.5">
                 <CheckCircle className="h-4 w-4 text-accent" />
-                <span className="font-body text-sm text-muted-foreground">No account needed</span>
+                <span className="font-body text-sm text-muted-foreground">Runs in your browser</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle className="h-4 w-4 text-accent" />
-                <span className="font-body text-sm text-muted-foreground">100% private</span>
+                <span className="font-body text-sm text-muted-foreground">You control login and MFA</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle className="h-4 w-4 text-accent" />
@@ -83,10 +85,10 @@ const HeroSection = () => {
                 <div className="mb-4 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Shield className="h-5 w-5 text-secondary" />
-                    <span className="font-display text-sm font-bold text-primary">DataTrace Report</span>
+                    <span className="font-display text-sm font-bold text-primary">DataTrace</span>
                   </div>
-                  <span className="rounded-full bg-destructive/10 px-2.5 py-0.5 font-body text-xs font-medium text-destructive">
-                    223 items found
+                  <span className="rounded-full bg-secondary/10 px-2.5 py-0.5 font-body text-xs font-medium text-secondary">
+                    4 exports queued
                   </span>
                 </div>
                 <div className="space-y-3">
@@ -104,13 +106,13 @@ const HeroSection = () => {
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="font-display text-sm font-semibold text-primary">{item.count}</span>
-                        <div className={`h-2 w-2 rounded-full ${item.status === "warning" ? "bg-destructive" : "bg-accent"}`} />
+                        <div className="h-2 w-2 rounded-full bg-accent" />
                       </div>
                     </motion.div>
                   ))}
                 </div>
                 <Button variant="hero" size="default" className="mt-4 w-full">
-                  Request Data Deletion
+                  Request Full Export
                 </Button>
               </div>
             </div>

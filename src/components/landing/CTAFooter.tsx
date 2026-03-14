@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Chrome, Shield } from "lucide-react";
+import { FileText, Shield } from "lucide-react";
 
 const CTAFooter = () => {
   return (
@@ -14,14 +14,16 @@ const CTAFooter = () => {
         >
           <div className="relative z-10">
             <h2 className="font-display text-3xl font-bold text-primary-foreground md:text-4xl">
-              Your data. Your rules.
+              Get your data back, the official way.
             </h2>
             <p className="mx-auto mt-4 max-w-md font-body text-base text-primary-foreground/70">
-              Join 50,000+ people who've taken control of their digital privacy. Free forever.
+              Use guided workflows to request exports from the companies that hold the most personal data.
             </p>
-            <Button variant="hero" size="lg" className="mt-8 h-14 bg-background px-10 text-base text-primary hover:bg-background/90">
-              <Chrome className="mr-2 h-5 w-5" />
-              Add to Chrome — Free
+            <Button asChild variant="hero" size="lg" className="mt-8 h-14 bg-background px-10 text-base text-primary hover:bg-background/90">
+              <a href="/start">
+                <FileText className="mr-2 h-5 w-5" />
+                Start with top targets
+              </a>
             </Button>
           </div>
 
@@ -43,7 +45,14 @@ const CTAFooter = () => {
           <div className="flex gap-6">
             <a href="#" className="font-body text-sm text-muted-foreground transition-colors duration-200 hover:text-primary">Privacy Policy</a>
             <a href="#" className="font-body text-sm text-muted-foreground transition-colors duration-200 hover:text-primary">Terms</a>
-            <a href="#" className="font-body text-sm text-muted-foreground transition-colors duration-200 hover:text-primary">GitHub</a>
+            <a
+              href="https://github.com/mindfulmakers/data-auto-requester"
+              target="_blank"
+              rel="noreferrer"
+              className="font-body text-sm text-muted-foreground transition-colors duration-200 hover:text-primary"
+            >
+              GitHub
+            </a>
           </div>
           <p className="font-body text-xs text-muted-foreground">© 2026 DataTrace. All rights reserved.</p>
         </footer>
