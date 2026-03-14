@@ -121,6 +121,4 @@ const HeroSection = () => {
   );
 };
 
-import { Shield } from "lucide-react";
-
 export default HeroSection;
