@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Chrome, CheckCircle, AlertTriangle, Mail, Cookie, Eye } from "lucide-react";
+import { Chrome, CheckCircle, AlertTriangle, Mail, Cookie, Eye, Shield } from "lucide-react";
 
 const dataItems = [
   { icon: Mail, label: "Email addresses", count: 12, status: "found" },
