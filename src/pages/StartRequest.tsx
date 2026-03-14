@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Shield, ExternalLink, CheckCircle } from "lucide-react";
+import { Shield, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const steps = [
@@ -124,19 +124,29 @@ const StartRequest = () => {
           </div>
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="rounded-xl border border-border bg-background px-5 py-4">
-              <p className="font-body text-sm font-semibold text-primary">Step 1: Download Codex CLI</p>
+              <div className="flex items-center justify-between gap-3">
+                <p className="font-body text-sm font-semibold text-primary">Step 1: Install Codex CLI</p>
+                <CopyButton
+                  value="npm install -g @openai/codex"
+                  ariaLabel="Copy Codex CLI install command"
+                />
+              </div>
               <p className="mt-2 font-body text-sm text-muted-foreground">
-                Grab the installer here, then sign in:
+                Run this command in your terminal, then sign in.
               </p>
-              <a
-                href="https://openai.com/codex/get-started/"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-3 inline-flex items-center gap-2 font-body text-sm text-primary hover:underline"
-              >
-                Open Codex download page
-                <ExternalLink className="h-4 w-4" />
-              </a>
+              <pre className="mt-3 overflow-x-auto rounded-lg bg-muted px-4 py-3 text-xs text-foreground">
+                <code>npm install -g @openai/codex</code>
+              </pre>
+              <div className="mt-3 flex items-center justify-between gap-3">
+                <p className="font-body text-xs font-semibold text-primary">Sign in</p>
+                <CopyButton
+                  value="codex --login"
+                  ariaLabel="Copy Codex login command"
+                />
+              </div>
+              <pre className="mt-2 overflow-x-auto rounded-lg bg-muted px-4 py-3 text-xs text-foreground">
+                <code>codex --login</code>
+              </pre>
             </div>
             <div className="rounded-xl border border-border bg-background px-5 py-4">
               <div className="flex items-center justify-between gap-3">
